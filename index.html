@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxiCar - Book Your Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🚕 Taxi<span>Car</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#booking">Book Taxi</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Ride, <span>Your Way</span></h1>
+            <p>Fast, safe and affordable taxi rides whenever you need them.</p>
+
+            <a href="#booking" class="btn">Book a Taxi</a>
+        </div>
+
+        <div class="taxi-image">
+            🚕
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="booking-card">
+            <h2>Book Your Taxi</h2>
+            <p>Enter your trip details below.</p>
+
+            <form id="bookingForm">
+
+                <div class="input-group">
+                    <label>Pickup Location</label>
+                    <input
+                        type="text"
+                        id="pickup"
+                        placeholder="Enter pickup location"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Drop Location</label>
+                    <input
+                        type="text"
+                        id="drop"
+                        placeholder="Enter destination"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Distance (KM)</label>
+                        <input
+                            type="number"
+                            id="distance"
+                            placeholder="Example: 10"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Passengers</label>
+                        <select id="passengers">
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5">5 Passengers</option>
+                            <option value="6">6 Passengers</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Taxi Type</label>
+
+                    <select id="taxiType">
+                        <option value="sedan">🚕 Sedan - ₹15/km</option>
+                        <option value="suv">🚙 SUV - ₹20/km</option>
+                        <option value="premium">🚘 Premium - ₹30/km</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="book-btn">
+                    Calculate Fare
+                </button>
+
+            </form>
+
+            <!-- Fare Result -->
+            <div id="result" class="result">
+                <h3>Estimated Fare</h3>
+                <p id="fare">₹0</p>
+                <p id="tripDetails"></p>
+
+                <button onclick="confirmBooking()" class="confirm-btn">
+                    Confirm Booking
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🚕</div>
+                <h3>City Taxi</h3>
+                <p>Quick and comfortable rides around the city.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Airport Transfer</h3>
+                <p>Reliable transportation to and from airports.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛣️</div>
+                <h3>Outstation</h3>
+                <p>Travel safely and comfortably to other cities.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>Why Choose TaxiCar?</h2>
+
+        <div class="features">
+
+            <div>
+                <span>⚡</span>
+                <h3>Fast</h3>
+                <p>Get a taxi quickly whenever you need one.</p>
+            </div>
+
+            <div>
+                <span>🔒</span>
+                <h3>Safe</h3>
+                <p>Your safety and comfort are our priority.</p>
+            </div>
+
+            <div>
+                <span>💰</span>
+                <h3>Affordable</h3>
+                <p>Transparent and affordable taxi fares.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">🚕 Taxi<span>Car</span></div>
+        <p>© 2026 TaxiCar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
