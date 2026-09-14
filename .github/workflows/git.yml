@@ -11,8 +11,8 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USENAME }}
-          key: ${{ secrets.KEY }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.key }}
           port: 22
           source: "."
           target: "/var/www/html"     
