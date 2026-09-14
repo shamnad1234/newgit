@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+/* Navbar */
+
+header {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #ffc400;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffc400;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 600px;
+    background: linear-gradient(
+        135deg,
+        #111 0%,
+        #252525 60%,
+        #ffc400 60%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ffc400;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ffc400;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+.taxi-image {
+    font-size: 180px;
+    animation: moveTaxi 2s infinite alternate;
+}
+
+@keyframes moveTaxi {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+/* Booking */
+
+.booking-section {
+    padding: 80px 20px;
+    background: #eee;
+}
+
+.booking-card {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.booking-card h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.booking-card > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #ffc400;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.book-btn,
+.confirm-btn {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn {
+    background: #ffc400;
+    color: #111;
+}
+
+.book-btn:hover {
+    background: #e5ad00;
+}
+
+/* Result */
+
+.result {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff8d6;
+    border-left: 5px solid #ffc400;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin-bottom: 10px;
+}
+
+#fare {
+    font-size: 38px;
+    font-weight: bold;
+    color: #d89f00;
+    margin-bottom: 10px;
+}
+
+#tripDetails {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.confirm-btn {
+    background: #111;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background: #333;
+}
+
+/* Services */
+
+.services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services h2,
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    flex: 1;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* About */
+
+.about {
+    background: #111;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.features {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.features div {
+    flex: 1;
+}
+
+.features span {
+    font-size: 45px;
+}
+
+.features h3 {
+    margin: 15px 0 8px;
+    color: #ffc400;
+}
+
+/* Footer */
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .taxi-image {
+        font-size: 100px;
+        margin-top: 30px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .service-container,
+    .features {
+        flex-direction: column;
+    }
+
+    .booking-card {
+        padding: 25px;
+    }
+}
+
